@@ -2,12 +2,22 @@
   "name": "wrike-sdk",
   "version": "1.0.0",
   "description": "SDK for the Wrike API",
-  "main": "index.js",
+  "main": "src/Wrike.js",
   "scripts": {
     "dev": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obe711/wrike-sdk.git"
+  },
+  "keywords": [
+    "wrike",
+    "sdk",
+    "node",
+    "apis"
+  ],
   "author": "Obediah Klopfenstein",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
     "qs": "^6.10.1"
