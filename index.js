@@ -7,6 +7,6 @@ const wrike = new Wrike({
 });
 
 (async () => {
-  const space = await wrike.users.QueryUser("KUAKVUVL")
-  console.log(space);
+  const spaces = await wrike.spaces.GetSpaces();
+  console.log(spaces);
 })();
