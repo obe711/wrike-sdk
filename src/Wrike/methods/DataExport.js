@@ -4,11 +4,11 @@ class DataExport {
     this.endPoint = "/data_export"
   }
 
-  async Get(params = {}) {
+  async GetDataExport(params = {}) {
     return await this.client.get(this.endPoint, params);
   }
 
-  async GetById(id, params = {}) {
+  async GetDataExportById(id, params = {}) {
     return await this.client.get(this.endPoint + "/" + id, params);
   }
 

@@ -4,7 +4,7 @@ class AuditLog {
     this.endPoint = "/audit_log"
   }
 
-  async Get(params = {}) {
+  async GetAuditLog(params = {}) {
     return await this.client.get(this.endPoint, params);
   }
 }

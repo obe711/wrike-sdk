@@ -4,7 +4,7 @@ class AccessRoles {
     this.endPoint = "/access_roles"
   }
 
-  async Get(params = {}) {
+  async GetAccessRoles(params = {}) {
     return await this.client.get(this.endPoint, params);
   }
 }

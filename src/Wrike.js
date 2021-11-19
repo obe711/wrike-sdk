@@ -1,24 +1,31 @@
 const Client = require("./Wrike/Client");
 
-const Spaces = require("./Wrike/methods/Spaces");
-const Account = require("./Wrike/methods/Account");
 const Contacts = require("./Wrike/methods/Contacts");
 const Users = require("./Wrike/methods/Users");
-const Timelogs = require("./Wrike/methods/Timelogs");
 const Groups = require("./Wrike/methods/Groups");
 const Invitations = require("./Wrike/methods/Invitations");
+const Account = require("./Wrike/methods/Account");
 const Workflows = require("./Wrike/methods/Workflows");
 const CustomFields = require("./Wrike/methods/CustomFields");
+const FoldersProjects = require("./Wrike/methods/FoldersProjects");
+const Tasks = require("./Wrike/methods/Tasks");
 const Comments = require("./Wrike/methods/Comments");
 const Dependencies = require("./Wrike/methods/Dependencies");
+const Timelogs = require("./Wrike/methods/Timelogs");
+const TimelogCategories = require("./Wrike/methods/TimelogCategories");
+const Attachments = require("./Wrike/methods/Attachments");
+const Spaces = require("./Wrike/methods/Spaces");
+const DataExport = require("./Wrike/methods/DataExport");
+const AuditLog = require("./Wrike/methods/AuditLog");
+const AccessRoles = require("./Wrike/methods/AccessRoles");
+const AsyncJob = require("./Wrike/methods/AsyncJob");
+const Approvals = require("./Wrike/methods/Approvals");
+const WorkSchedules = require("./Wrike/methods/WorkSchedules");
+const WorkScheduleExceptions = require("./Wrike/methods/WorkScheduleExceptions");
+const UserScheduleExceptions = require("./Wrike/methods/UserScheduleExceptions");
+const Blueprints = require("./Wrike/methods/Blueprints");
 const EDiscovery = require("./Wrike/methods/EDiscovery");
 const HourlyRates = require("./Wrike/methods/HourlyRates");
-const Blueprints = require("./Wrike/methods/Blueprints");
-const AsyncJob = require("./Wrike/methods/AsyncJob");
-const AccessRoles = require("./Wrike/methods/AccessRoles");
-const AuditLog = require("./Wrike/methods/AuditLog");
-const DataExport = require("./Wrike/methods/DataExport");
-const TimelogCategories = require("./Wrike/methods/TimelogCategories");
 
 /**
  * SDK library for accessing the wrike APIs.
@@ -50,22 +57,22 @@ class Wrike {
     this.account = new Account(this.client);
     this.workflows = new Workflows(this.client);
     this.customfields = new CustomFields(this.client);
-    // FoldersProjects
-    // Tasks
+    this.folders = new FoldersProjects(this.client);
+    this.tasks = new Tasks(this.client);
     this.comments = new Comments(this.client);
     this.dependencies = new Dependencies(this.client)
     this.timelogs = new Timelogs(this.client);
     this.timelogcategories = new TimelogCategories(this.client);
-    // Attachments
+    this.attachments = new Attachments(this.client);
     this.spaces = new Spaces(this.client);
     this.dataexport = new DataExport(this.client);
     this.auditlog = new AuditLog(this.client);
     this.accessroles = new AccessRoles(this.client);
     this.asyncjob = new AsyncJob(this.client);
-    // Approvals
-    // WorkSchedules
-    // WorkScheduleExceptions
-    // UserScheduleExceptions
+    this.approvals = new Approvals(this.client);
+    this.workschedules = new WorkSchedules(this.client);
+    this.workscheduleexceptions = new WorkScheduleExceptions(this.client);
+    this.userscheduleexceptions = new UserScheduleExceptions(this.client);
     this.blueprints = new Blueprints(this.client);
     this.ediscovery = new EDiscovery(this.client);
     this.hourlyrates = new HourlyRates(this.client)

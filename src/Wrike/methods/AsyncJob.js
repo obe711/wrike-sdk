@@ -4,7 +4,7 @@ class AsyncJob {
     this.endPoint = "/async_job"
   }
 
-  async Get(id, params = {}) {
+  async GetAsyncJob(id, params = {}) {
     return await this.client.get(this.endPoint + "/" + id, params);
   }
 }
