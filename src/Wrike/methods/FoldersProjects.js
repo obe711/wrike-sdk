@@ -20,7 +20,7 @@ class FoldersProjects {
     return await this.client.get(this.endPoint + "/" + ids.join() + "/folders_history", params);
   }
 
-  async GetFoldersByIds(params = {}) {
+  async GetFoldersByIds(ids, params = {}) {
     return await this.client.get(this.endPoint + "/" + ids.join(), params);
   }
 

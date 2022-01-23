@@ -26,6 +26,7 @@ const UserScheduleExceptions = require("./Wrike/methods/UserScheduleExceptions")
 const Blueprints = require("./Wrike/methods/Blueprints");
 const EDiscovery = require("./Wrike/methods/EDiscovery");
 const HourlyRates = require("./Wrike/methods/HourlyRates");
+const Webhooks = require("./Wrike/methods/Webhooks");
 
 /**
  * SDK library for accessing the wrike APIs.
@@ -75,7 +76,8 @@ class Wrike {
     this.userscheduleexceptions = new UserScheduleExceptions(this.client);
     this.blueprints = new Blueprints(this.client);
     this.ediscovery = new EDiscovery(this.client);
-    this.hourlyrates = new HourlyRates(this.client)
+    this.hourlyrates = new HourlyRates(this.client);
+    this.webhooks = new Webhooks(this.client);
   }
 }
 

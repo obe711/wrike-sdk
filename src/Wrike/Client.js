@@ -5,6 +5,7 @@ const qs = require("qs");
 class Client {
   constructor(options = {}) {
     this.accessToken = options.accessToken;
+    this.webhookToken = options.webhookToken;
     this.version = pkg.version;
 
     this.http = axios.create({

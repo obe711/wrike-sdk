@@ -19,6 +19,10 @@ class Spaces {
   async UpdateSpace(id, params = {}) {
     return await this.client.put(this.endPoint + "/" + id, params);
   }
+
+  async DeleteSpaceById(id, params = {}) {
+    return await this.client.delete(this.endPoint + "/" + id, params);
+  }
 }
 
 module.exports = Spaces;
