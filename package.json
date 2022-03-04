@@ -1,6 +1,6 @@
 {
   "name": "wrike-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SDK for the Wrike v4 API",
   "main": "src/Wrike.js",
   "scripts": {
