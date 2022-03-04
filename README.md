@@ -20,7 +20,7 @@ const wrike = new Wrike({
 });
 
 (async () => {
-  const spaces = await wrike.spaces.wrike.spaces.GetSpaces();
+  const spaces = await wrike.spaces.GetSpaces();
   console.log(spaces);
 })();
 ```
