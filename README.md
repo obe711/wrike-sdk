@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/wrike-sdk.svg?style=flat-square)](https://www.npmjs.org/package/wrike-sdk)
 [![install size](https://packagephobia.now.sh/badge?p=wrike-sdk)](https://packagephobia.now.sh/result?p=wrike-sdk)
 [![npm downloads](https://img.shields.io/npm/dm/wrike-sdk.svg?style=flat-square)](http://npm-stat.com/charts.html?package=wrike-sdk)
+[![Known Vulnerabilities](https://snyk.io/test/npm/wrike-sdk/badge.svg)](https://snyk.io/test/npm/wrike-sdk)
 
 SDK for the Wrike v4 API
 
