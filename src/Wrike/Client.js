@@ -1,6 +1,6 @@
 const pkg = require("../../package.json");
 const axios = require("axios");
-const qs = require("qs");
+const queryString = require('query-string');
 
 class Client {
   constructor(options = {}) {
@@ -17,13 +17,27 @@ class Client {
         }
       },
       paramsSerializer: params => {
-        return qs.stringify(params)
+        return queryString.stringify(params)
       }
     });
   }
 
-  async get(url, params = {}) {
-    const { data } = await this.http.get(url, { ...params });
+  async get(url, queryParams) {
+    let params = {};
+
+    for (const key in queryParams) {
+      if (Object.hasOwnProperty.call(queryParams, key)) {
+        const element = queryParams[key];
+
+        // If array, stringify
+        if (typeof element === "object", element.length > 0) {
+          params[key] = JSON.stringify(element);
+        } else {
+          params[key] = element;
+        }
+      }
+    }
+    const { data } = await this.http.get(url, { params });
     return data;
   }
 

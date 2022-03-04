@@ -4,7 +4,7 @@
   "description": "SDK for the Wrike v4 API",
   "main": "src/Wrike.js",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node dev/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,6 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
-    "qs": "^6.10.1"
-  },
-  "devDependencies": {
-    "dotenv": "^10.0.0"
+    "query-string": "^7.1.1"
   }
 }
