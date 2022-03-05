@@ -8,6 +8,11 @@ class Timelogs {
     return await this.client.get(this.endPoint, params);
   }
 
+  async QueryTimelogsRange(start, end, params = {}) {
+    let trackedDate = `"start":"${start}","end":"${end}"`;
+    return await this.client.get(this.endPoint + `?trackedDate={${trackedDate}}`, params);
+  }
+
   async QueryContactTimelogs(id, params = {}) {
     return await this.client.get("/contacts/" + id + this.endPoint, params);
   }
