@@ -8,19 +8,19 @@ class Tasks {
     return await this.client.get(this.endPoint, params);
   }
 
-  async QueryFolderTasks(params = {}) {
+  async QueryFolderTasks(id, params = {}) {
     return await this.client.get("/folders/" + id + this.endPoint, params);
   }
 
-  async QuerySpaceTasks(params = {}) {
+  async QuerySpaceTasks(id, params = {}) {
     return await this.client.get("/spaces/" + id + this.endPoint, params);
   }
 
-  async QueryTasksByIds(params = {}) {
+  async QueryTasksByIds(ids, params = {}) {
     return await this.client.get(this.endPoint + "/" + ids.join(), params);
   }
 
-  async QueryTasksFieldsHistory(params = {}) {
+  async QueryTasksFieldsHistory(ids, params = {}) {
     return await this.client.get(this.endPoint + "/" + ids.join() + "/tasks_history", params);
   }
 
